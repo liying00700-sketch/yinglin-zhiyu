@@ -1,0 +1,15 @@
+[build]
+  command = "pnpm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+  from = "/api/parenting/ai"
+  to = "/.netlify/functions/parenting-ai"
+  status = 200
+  force = true
